@@ -7,13 +7,14 @@ env:
   GODOT_VERSION: 4.2.1
   EXPORT_NAME: PirateJam14-game
   PROJECT_PATH: piratejam14
+  IMAGE_NAME: pull barichello/godot-ci:mono-4.2.1
 
 jobs:
   export-windows:
     name: Godot Windows Export
     runs-on: ubuntu-latest
     container:
-      image: abarichello/godot-ci:mono-${GODOT_VERSION}
+      image: barichello/godot-ci:mono-$GODOT_VERSION
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -22,7 +23,7 @@ jobs:
       - name: Setup
         run: |
           mkdir -v -p ~/.local/share/godot/templates
-          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable.mono ~/.local/share/godot/templates/${GODOT_VERSION}.stable.mono
+          mv /root/.local/share/godot/templates/$GODOT_VERSION.stable.mono ~/.local/share/godot/templates/$GODOT_VERSION.stable.mono
       - name: Export
         run: |
           mkdir -v -p build/windows
@@ -47,7 +48,7 @@ jobs:
     name: Godot Linux Export
     runs-on: ubuntu-latest
     container:
-      image: abarichello/godot-ci:mono-${GODOT_VERSION}
+      image: barichello/godot-ci:mono-$GODOT_VERSION
     steps:
       - name: Checkout
         uses: actions/checkout@v2
