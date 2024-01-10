@@ -7,7 +7,6 @@ on:
 env:
   GODOT_VERSION: 4.2.1
   EXPORT_NAME: PirateJam14-game
-  PROJECT_PATH: piratejam14
 
 jobs:
   export-windows:
@@ -44,7 +43,7 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.ITCH_UPLOAD_API_KEY }}
           CHANNEL: windows
-          ITCH_GAME: $PROJECT_PATH
+          ITCH_GAME: piratejam14
           ITCH_USER: nikkxi
           PACKAGE: ./build/windows
           VERSION_FILE: version.txt
@@ -82,7 +81,7 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.ITCH_UPLOAD_API_KEY }}
           CHANNEL: linux
-          ITCH_GAME: $PROJECT_PATH
+          ITCH_GAME: piratejam14
           ITCH_USER: nikkxi
           PACKAGE: ./build/linux
           VERSION_FILE: version.txt
