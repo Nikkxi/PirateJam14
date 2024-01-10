@@ -33,7 +33,7 @@ jobs:
           name: ${EXPORT_NAME}-windows
           path: build/windows
       - name: Itch.io Publish
-        uses: yeslaya/butler-publish-itchio-action@v1.0.3
+        uses: yeslayla/butler-publish-itchio-action@v1.0.3
         env:
           BUTLER_CREDENTIALS: ${{ secrets.ITCH_UPLOAD_API_KEY }}
           CHANNEL: windows
@@ -67,7 +67,7 @@ jobs:
           name: ${EXPORT_NAME}-linux
           path: build/linux
       - name: Itch.io Publish
-        uses: yeslaya/butler-publish-itchio-action@v1.0.3
+        uses: yeslayla/butler-publish-itchio-action@v1.0.3
         env:
           BUTLER_CREDENTIALS: ${{ secrets.ITCH_UPLOAD_API_KEY }}
           CHANNEL: linux
