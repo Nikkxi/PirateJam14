@@ -1,5 +1,5 @@
 # PirateJam14 Game
-** This is a jam game for [PirateSoftware Game Jam #14](https://itch.io/jam/pirate) **    
+**This is a jam game for [PirateSoftware Game Jam #14](https://itch.io/jam/pirate)**    
     
     
 **Description**    
