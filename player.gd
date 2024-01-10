@@ -10,7 +10,6 @@ func _physics_process(delta):
 		get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 		get_tree().quit()
 	
-	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var vDirection = Input.get_axis("ui_up", "ui_down")
